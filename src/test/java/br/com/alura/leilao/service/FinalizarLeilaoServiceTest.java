@@ -42,7 +42,7 @@ class FinalizarLeilaoServiceTest {
 		service.finalizarLeiloesExpirados();
 		
 		Leilao leilao = leiloes.get(0);
-		Assert.assertTrue(!leilao.isFechado());
+		Assert.assertTrue(leilao.isFechado());
 		Assert.assertEquals(new BigDecimal("900"), 
 				leilao.getLanceVencedor().getValor());
 		
